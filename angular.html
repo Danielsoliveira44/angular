@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" ></script>
+</head>
+    <body ng-app="" >
+    
+    <div ng-init="nomes=['Douglas','Gabriel','Paulo','Lucas']">
+        <ul>
+            <li ng-repeat="y in nomes">
+                {{ y }}
+            </li>
+        </ul>
+    </div>
+    <div ng-init="cidades=['São Paulo','Guarulhos','Mogi']">
+        <ul>
+            <li ng-repeat="y in cidades">
+                {{ y }}
+            </li>
+        </ul>
+    </div>
+
+    <div ng-init="nomes_cidade=[
+        {nome:'Douglas',cidade:'São Paulo'},
+        {nome:'Gabriel',cidade:'Guarulhos'},
+        {nome:'Paulo',cidade:'Mogi'},
+        {nome:'Douglas',cidade:'Tabõao da serra'},
+    ]">
+        
+        <ul>
+            <li ng-repeat="bacon in nomes_cidade">
+                {{bacon.nome + '-' + bacon.cidade }}
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+        <p>
+            Nome: <input type="text" ng-model="nome">
+        </p>
+
+        <h1>
+            Olá {{nome}}
+        </h1>
+
+    </body>
+</html>
